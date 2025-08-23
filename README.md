@@ -1,15 +1,17 @@
 # Container images with the Aiven tiered storage plugins for Apache Kafka®
 
+Note: This repository is not part of the Apache Kafka project or related to Aiven!
+
 This repository contains set of OCI artifacts / container images with the Apache Kafka® [tiered storage plugins from Aiven](https://github.com/Aiven-Open/tiered-storage-for-apache-kafka).
 These container images should allow you to use it with Strimzi 0.47 and newer using the Kubernetes Image Volumes.
 The tag of the container specifies the type of the plugin and its version.
 
 | Plugin               | Container image                                                   |
 |----------------------|-------------------------------------------------------------------|
-| Filesystem           | `ghcr.io/kafka-oci-plugins/aiven-tiered-storage:1.0.0-filesystem` |
-| Amazon S3            | `ghcr.io/kafka-oci-plugins/aiven-tiered-storage:1.0.0-s3`         |
-| Google Cloud Storage | `ghcr.io/kafka-oci-plugins/aiven-tiered-storage:1.0.0-gcs`        |
-| Azure Blob Storage   | `ghcr.io/kafka-oci-plugins/aiven-tiered-storage:1.0.0-azure`      |
+| Filesystem           | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-filesystem` |
+| Amazon S3            | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-s3`         |
+| Google Cloud Storage | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-gcs`        |
+| Azure Blob Storage   | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-azure`      |
 
 ## Example `Kafka` custom resource
 
@@ -28,7 +30,7 @@ spec:
         volumes:
           - name: aiven-tiered-storage
             image:
-              reference: ghcr.io/kafka-oci-plugins/aiven-tiered-storage:1.0.0-filesystem
+              reference: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-filesystem
       kafkaContainer:
         volumeMounts:
           - name: aiven-tiered-storage
@@ -51,7 +53,7 @@ spec:
       volumes:
         - name: aiven-tiered-storage
           image:
-            reference: ghcr.io/kafka-oci-plugins/aiven-tiered-storage:1.0.0-filesystem
+            reference: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-filesystem
     kafkaContainer:
       volumeMounts:
         - name: aiven-tiered-storage

@@ -12,8 +12,8 @@ FROM scratch
 ARG VERSION=latest
 ARG PLUGIN=plugin
 
-LABEL org.opencontainers.image.source='https://github.com/kafka-oci-plugins/aiven-tiered-storage' \
-      org.opencontainers.image.url='https://github.com/kafka-oci-plugins/aiven-tiered-storage' \
+LABEL org.opencontainers.image.source='https://github.com/oci-plugins-for-apache-kafka/aiven-tiered-storage' \
+      org.opencontainers.image.url='https://github.com/oci-plugins-for-apache-kafka/aiven-tiered-storage' \
       org.opencontainers.image.version="${VERSION}" \
       org.opencontainers.image.title="Aiven ${PLUGIN} tiered storage plugin for Apache Kafka®" \
       org.opencontainers.image.description='Container image with the Aiven ${PLUGIN} tiered storage plugin for Apache Kafka®'
