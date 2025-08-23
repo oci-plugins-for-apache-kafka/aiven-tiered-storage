@@ -32,10 +32,10 @@ jobs:
 
       # Build the Container image for the filesystem plugin
       - name: Build the container
-        run: docker build --no-cache --build-arg VERSION=$(cat version) --build-arg PLUGIN=${PLUGIN} -t ghcr.io/scholzj/kafka-tiered-storage-oci:$(cat version)-${PLUGIN} .
+        run: docker build --no-cache --build-arg VERSION=$(cat version) --build-arg PLUGIN=${PLUGIN} -t ghcr.io/kafka-oci-plugins/aiven-tiered-storage:$(cat version)-${PLUGIN} .
         env:
           PLUGIN: ${{ matrix.plugin }}
       - name: Push the container
-        run: docker push ghcr.io/scholzj/kafka-tiered-storage-oci:$(cat version)-${PLUGIN}
+        run: docker push ghcr.io/kafka-oci-plugins/aiven-tiered-storage:$(cat version)-${PLUGIN}
         env:
           PLUGIN: ${{ matrix.plugin }}
