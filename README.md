@@ -1,4 +1,4 @@
-# Container images with the Aiven Kafka tiered storage plugins for Apache Kafka®
+# Container images with the Aiven tiered storage plugins for Apache Kafka®
 
 This repository contains set of OCI artifacts / container images with the Apache Kafka® [tiered storage plugins from Aiven](https://github.com/Aiven-Open/tiered-storage-for-apache-kafka).
 These container images should allow you to use it with Strimzi 0.47 and newer using the Kubernetes Image Volumes.
