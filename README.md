@@ -8,10 +8,10 @@ The tag of the container specifies the type of the plugin and its version.
 
 | Plugin               | Container image                                                   |
 |----------------------|-------------------------------------------------------------------|
-| Filesystem           | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-filesystem` |
-| Amazon S3            | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-s3`         |
-| Google Cloud Storage | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-gcs`        |
-| Azure Blob Storage   | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-azure`      |
+| Filesystem           | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-filesystem` |
+| Amazon S3            | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-s3`         |
+| Google Cloud Storage | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-gcs`        |
+| Azure Blob Storage   | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-azure`      |
 
 ## Example `Kafka` custom resource
 
@@ -30,7 +30,7 @@ spec:
         volumes:
           - name: aiven-tiered-storage
             image:
-              reference: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-filesystem
+              reference: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-filesystem
       kafkaContainer:
         volumeMounts:
           - name: aiven-tiered-storage
@@ -53,7 +53,7 @@ spec:
       volumes:
         - name: aiven-tiered-storage
           image:
-            reference: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.0.0-filesystem
+            reference: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-filesystem
     kafkaContainer:
       volumeMounts:
         - name: aiven-tiered-storage
